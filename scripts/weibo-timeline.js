@@ -1,6 +1,5 @@
-/*
-README：https://github.com/yichahucha/surge/tree/master
- */
+let version = "1.0.10"
+
 const path1 = "/groups/timeline";
 const path2 = "/statuses/unread";
 const path3 = "/statuses/extend";
