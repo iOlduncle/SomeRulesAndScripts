@@ -231,7 +231,7 @@ function filter_finder_items(data) {
             }
         } else if (item["category"] == "feed") {
             type = item["data"]["mblogtype"]
-            if (type == 1) {
+            if (type == 1 || type == 4) {
                 items.splice(index, 1)
             }
         }
