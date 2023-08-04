@@ -124,7 +124,7 @@ function removeTopics(e) {
 }
 
 function isAd(e) {
-    return !!e && ("广告" == e.mblogtypename || "热推" == e.mblogtypename || e.promotion?.type == "ad" || e.page_info?.actionlog?.source == "ad" || e.content_auth_info?.content_auth_title == "广告" || e.mblogtype == 4 || e.mblogtype == 1)
+    return !!e && ("广告" == e.mblogtypename || "热推" == e.mblogtypename || e.promotion?.type == "ad" || e.page_info?.actionlog?.source == "ad" || e.content_auth_info?.content_auth_title == "广告" || e.mblogtype == 4 || e.mblogtype == 1 || e.title.indexOf("关注了") != -1)
 }
 
 function squareHandler(e) {
