@@ -4,4 +4,4 @@
 
 [Rule]
 DOMAIN-SUFFIX,doubleclick-cn.net,REJECT
-#DOMAIN-SUFFIX,mosspf.com,REJECT
+#DOMAIN-SUFFIX,adx.mosspf.com,REJECT
