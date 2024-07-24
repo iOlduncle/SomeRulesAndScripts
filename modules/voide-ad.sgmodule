@@ -3,10 +3,10 @@
 #!system=ios
 
 [Rule]
-DOMAIN-SUFFIX,doubleclick-cn.net,REJECT-TINYGIF
-DOMAIN-SUFFIX,mosspf.com,REJECT-TINYGIF
-DOMAIN-SUFFIX,tnc3-alisc1.zijieapi.com,REJECT-TINYGIF
-DOMAIN-SUFFIX,zhanzhang.toutiao.com,REJECT-TINYGIF
-DOMAIN-SUFFIX,pangolin-sdk-toutiao1.com,REJECT-TINYGIF
-DOMAIN-SUFFIX,volces.com,REJECT-TINYGIF
+DOMAIN-SUFFIX,doubleclick-cn.net,REJECT
+DOMAIN-SUFFIX,mosspf.com,REJECT
+DOMAIN-SUFFIX,tnc3-alisc1.zijieapi.com,REJECT
+DOMAIN-SUFFIX,zhanzhang.toutiao.com,REJECT
+DOMAIN-SUFFIX,pangolin-sdk-toutiao1.com,REJECT
+DOMAIN-SUFFIX,volces.com,REJECT
 #DOMAIN-SUFFIX,uubabywang001.top, 视频站真实网址
