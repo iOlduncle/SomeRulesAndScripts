@@ -1,0 +1,7 @@
+#!name= 套壳影视
+#!desc= 套壳影视去广告
+#!system=ios
+
+[Rule]
+DOMAIN-SUFFIX,doubleclick-cn.net,REJECT
+DOMAIN-SUFFIX,mosspf.com,REJECT
