@@ -1,0 +1,4 @@
+payload:
+  - '+.www.ciciai.com'
+  - '+.bing.com'
+  - '+.openai.com'
