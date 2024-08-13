@@ -1,0 +1,4 @@
+payload:
+  - '+.socloud.me'
+  - '+.paopao.dog'
+  - '+.acaisbest.com'

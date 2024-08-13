@@ -10,8 +10,8 @@ function main(params) {
 //覆写规则
 function overwriteRules(params) {
     const rules = [
-        "RULE-SET,reject,⛔广告拦截",
-        "RULE-SET,ai,🤖Ai" ,
+        "RULE-SET,reject,广告拦截",
+        "RULE-SET,ciciai,CiciAi" ,
         "RULE-SET,direct,DIRECT",
         "RULE-SET,cncidr,DIRECT",
         "RULE-SET,private,DIRECT",
@@ -19,6 +19,7 @@ function overwriteRules(params) {
         "GEOIP,LAN,DIRECT,no-resolve",
         "GEOIP,CN,DIRECT,no-resolve",
         "RULE-SET,applications,DIRECT",
+        "RULE-SET,custom-proxy," + proxyMode,
         "RULE-SET,tld-not-cn," + proxyMode,
         "RULE-SET,google," + proxyMode,
         "RULE-SET,icloud," + proxyMode,
@@ -27,7 +28,7 @@ function overwriteRules(params) {
         "RULE-SET,greatfire," + proxyMode,
         "RULE-SET,telegramcidr," + proxyMode,
         "RULE-SET,proxy," + proxyMode,
-        "MATCH,🐟漏网之鱼",
+        "MATCH,漏网之鱼",
     ];
     const ruleProviders = {
         reject: {
@@ -37,7 +38,7 @@ function overwriteRules(params) {
             path: "./ruleset/reject.yaml",
             interval: 86400,
         },
-        ai:{
+        ciciai: {
             type:"http",
             behavior: "domain",
             url: "https://raw.githubusercontent.com/iOlduncle/SomeRulesAndScripts/main/roles/ai.txt",
@@ -56,6 +57,13 @@ function overwriteRules(params) {
             behavior: "domain",
             url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt",
             path: "./ruleset/apple.yaml",
+            interval: 86400,
+        },
+        "custom-proxy": {
+            type: "http",
+            behavior: "domain",
+            url: "https://raw.githubusercontent.com/iOlduncle/SomeRulesAndScripts/main/roles/custom-proxy.txt",
+            path: "./ruleset/custom-proxy.yaml",
             interval: 86400,
         },
         google: {
@@ -156,7 +164,7 @@ function overwriteProxyGroups(params) {
         .map((item) => ({
             name: item.name,
             type: "url-test",
-            url: "http://www.gstatic.com/generate_204",
+            url: "https://www.gstatic.com/generate_204",
             interval: 300,
             tolerance: 50,
             proxies: getProxiesByRegex(params, item.regex),
@@ -168,37 +176,37 @@ function overwriteProxyGroups(params) {
         {
             name: proxyMode,
             type: "select",
-            url: "http://www.gstatic.com/generate_204",
+            url: "https://www.gstatic.com/generate_204",
             //icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg",
             proxies: [
-                "🤖自动选择",
-                "🎯手动选择",
-                "🤖Ai",
-                "🔀负载均衡(散列)",
-                "🔁负载均衡(轮询)",
+                "自动选择",
+                "手动选择",
+                "CiciAi",
+                "负载均衡(散列)",
+                "负载均衡(轮询)",
                 "DIRECT",
             ],
         },
         {
-            name: "🎯手动选择",
+            name: "手动选择",
             type: "select",
             proxies: allProxies,
         },
         {
-            name: "🤖Ai",
+            name: "CiciAi",
             type: "select",
             proxies: allProxies,
         },
         {
-            name: "🤖自动选择",
+            name: "自动选择",
             type: "select",
             //icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg",
             proxies: ["ALL-自动选择"],
         },
         {
-            name: "🔀负载均衡(散列)",
+            name: "负载均衡(散列)",
             type: "load-balance",
-            url: "http://www.gstatic.com/generate_204",
+            url: "https://www.gstatic.com/generate_204",
             //icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/balance.svg",
             interval: 300,
             "max-failed-times": 3,
@@ -207,9 +215,9 @@ function overwriteProxyGroups(params) {
             proxies: allProxies,
         },
         {
-            name: "🔁负载均衡(轮询)",
+            name: "负载均衡(轮询)",
             type: "load-balance",
-            url: "http://www.gstatic.com/generate_204",
+            url: "https://www.gstatic.com/generate_204",
             //icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/merry_go.svg",
             interval: 300,
             "max-failed-times": 3,
@@ -220,19 +228,19 @@ function overwriteProxyGroups(params) {
         {
             name: "ALL-自动选择",
             type: "url-test",
-            url: "http://www.gstatic.com/generate_204",
+            url: "https://www.gstatic.com/generate_204",
             interval: 300,
             tolerance: 50,
             proxies: allProxies,
             hidden: true,
         },
         {
-            name: "🐟漏网之鱼",
+            name: "漏网之鱼",
             type: "select",
             proxies: ["DIRECT", proxyMode],
         },
         {
-            name: "⛔广告拦截",
+            name: "广告拦截",
             type: "select",
             proxies: ["REJECT", "DIRECT", proxyMode],
         },
