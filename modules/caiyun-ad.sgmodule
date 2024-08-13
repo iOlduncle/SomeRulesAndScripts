@@ -8,3 +8,5 @@ DOMAIN-SUFFIX,api.sogaha.cn,REJECT
 DOMAIN-SUFFIX,open.e.kuaishou.com,REJECT
 DOMAIN-SUFFIX,ad.cyapi.cn,REJECT
 DOMAIN-SUFFIX,errlog.umeng.com,REJECT
+DOMAIN-SUFFIX,ulogs.umengcloud.com,REJECT
+DOMAIN-SUFFIX,adashbc.ut.taobao.com,REJECT
