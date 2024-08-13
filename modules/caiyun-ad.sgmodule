@@ -1,0 +1,10 @@
+#!name= 彩云天气去广告
+#!desc= 去除彩云天气开屏和内部广告
+#!system=ios
+
+[Rule]
+DOMAIN-SUFFIX,ctrace.sogaha.cn,REJECT
+DOMAIN-SUFFIX,api.sogaha.cn,REJECT
+DOMAIN-SUFFIX,open.e.kuaishou.com,REJECT
+DOMAIN-SUFFIX,ad.cyapi.cn,REJECT
+DOMAIN-SUFFIX,errlog.umeng.com,REJECT
