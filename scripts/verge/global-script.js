@@ -11,7 +11,7 @@ function main(params) {
 function overwriteRules(params) {
     const rules = [
         "RULE-SET,reject,广告拦截",
-        "RULE-SET,ciciai,CiciAi" ,
+        "RULE-SET,closed-ai,ClosedAi" ,
         "RULE-SET,direct,DIRECT",
         "RULE-SET,cncidr,DIRECT",
         "RULE-SET,private,DIRECT",
@@ -38,10 +38,10 @@ function overwriteRules(params) {
             path: "./ruleset/reject.yaml",
             interval: 86400,
         },
-        ciciai: {
+        "closed-ai": {
             type:"http",
             behavior: "domain",
-            url: "https://raw.githubusercontent.com/iOlduncle/SomeRulesAndScripts/main/roles/ai.txt",
+            url: "https://raw.githubusercontent.com/iOlduncle/SomeRulesAndScripts/main/roles/closed-ai.txt",
             path: "./ruleset/ai.yaml",
             interval: 86400,
         },
@@ -181,7 +181,7 @@ function overwriteProxyGroups(params) {
             proxies: [
                 "自动选择",
                 "手动选择",
-                "CiciAi",
+                "ClosedAi",
                 "负载均衡(散列)",
                 "负载均衡(轮询)",
                 "DIRECT",
@@ -193,7 +193,7 @@ function overwriteProxyGroups(params) {
             proxies: allProxies,
         },
         {
-            name: "CiciAi",
+            name: "ClosedAi",
             type: "select",
             proxies: allProxies,
         },
