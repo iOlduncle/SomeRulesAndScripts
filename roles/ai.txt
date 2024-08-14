@@ -1,4 +1,8 @@
 payload:
-  - '+.www.ciciai.com'
+  - '+.ciciai.com'
   - '+.bing.com'
   - '+.openai.com'
+  - '+.vcs-sg.byteoversea.com'
+  - '+.vmweb-sg.ciciai.com'
+  - '+.sf16-tcc-tos-sg.byteoversea.com'
+  - '+.wss-normal-i18n.ciciai.com'
