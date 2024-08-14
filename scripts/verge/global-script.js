@@ -42,7 +42,7 @@ function overwriteRules(params) {
             type:"http",
             behavior: "domain",
             url: "https://raw.githubusercontent.com/iOlduncle/SomeRulesAndScripts/main/roles/closed-ai.txt",
-            path: "./ruleset/ai.yaml",
+            path: "./ruleset/closed-ai.yaml",
             interval: 86400,
         },
         icloud: {
