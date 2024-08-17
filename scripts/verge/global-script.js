@@ -11,7 +11,7 @@ function main(params) {
 function overwriteRules(params) {
     const rules = [
         "RULE-SET,reject,广告拦截",
-        "RULE-SET,closed-ai,ClosedAi" ,
+        "RULE-SET,closed-ai,ClosedAi",
         "RULE-SET,direct,DIRECT",
         "RULE-SET,cncidr,DIRECT",
         "RULE-SET,private,DIRECT",
@@ -39,7 +39,7 @@ function overwriteRules(params) {
             interval: 86400,
         },
         "closed-ai": {
-            type:"http",
+            type: "http",
             behavior: "domain",
             url: "https://raw.githubusercontent.com/iOlduncle/SomeRulesAndScripts/main/roles/closed-ai.txt",
             path: "./ruleset/closed-ai.yaml",
@@ -193,15 +193,15 @@ function overwriteProxyGroups(params) {
             proxies: allProxies,
         },
         {
-            name: "ClosedAi",
-            type: "select",
-            proxies: allProxies,
-        },
-        {
             name: "自动选择",
             type: "select",
             //icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg",
             proxies: ["ALL-自动选择"],
+        },
+        {
+            name: "ClosedAi",
+            type: "select",
+            proxies: allProxies,
         },
         {
             name: "负载均衡(散列)",
@@ -247,7 +247,11 @@ function overwriteProxyGroups(params) {
     ];
 
     autoProxyGroups.length &&
-    groups[2].proxies.unshift(...autoProxyGroups.map((item) => item.name));
+        groups[2].proxies.unshift(...autoProxyGroups.map((item) => item.name));
+    autoProxyGroups.length &&
+        groups[3].proxies.unshift(...autoProxyGroups.filter(item=> item.name === "SG-自动选择")
+        .map(item=>item.name).concat(autoProxyGroups.filter(item=>item.name !== "SG-自动选择")
+        .map(item=>item.name)));
     groups.push(...autoProxyGroups);
     params["proxy-groups"] = groups;
 }
