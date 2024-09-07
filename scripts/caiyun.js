@@ -52,10 +52,14 @@ if ($request.url.indexOf('user') != -1) {
 
     if(body.user !== undefined){
         body.user.name = "LINUX.DO";
+    }else{
+        body.name = "LINUX.DO";
     }
 
     if(body.user_info !== undefined){
         body.user_info.name = "LINUX.DO";
+    }else{
+        body.name = "LINUX.DO";
     }
   
 }
