@@ -65,7 +65,7 @@ if ($request.url.indexOf('user') != -1) {
         body.user_info.completed_percent = 100;
         body.user_info.gender = 0;
         body.user_info.show_completed_award = false;
-        body.user_info.is_under_maintenance = true;
+        body.user_info.is_under_maintenance = false;
     } else {
         body.name = "LINUX.DO";
         body.name_status = 1;
@@ -75,7 +75,7 @@ if ($request.url.indexOf('user') != -1) {
         body.completed_percent = 100;
         body.gender = 0;
         body.show_completed_award = false;
-        body.is_under_maintenance = true;
+        body.is_under_maintenance = false;
     }
 
 }
