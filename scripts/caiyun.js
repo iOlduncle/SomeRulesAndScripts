@@ -1,5 +1,5 @@
-console.log($request.url);
-console.log($response.body);
+// console.log($request.url);
+// console.log($response.body);
 var body = JSON.parse($response.body);
 const vip = '/vip_info';
 const adhf = '/activity';
