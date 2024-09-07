@@ -6,30 +6,30 @@ const adhf = '/activity';
 const user = '(user|visitors)';
 const card = 'card';
 
-if ($request.url.indexOf(vip) != -1){
+if ($request.url.indexOf(vip) != -1) {
     body.vip = {
-        "expires_time" : "4092599349",
-        "is_auto_renewal" : true
+        "expires_time": "4092599349",
+        "is_auto_renewal": true
     };
     body.svip = {
-        "expires_time" : "4092599349",
-        "is_auto_renewal" : true
+        "expires_time": "4092599349",
+        "is_auto_renewal": true
     };
-    body.show_upcoming_renewal= false;
+    body.show_upcoming_renewal = false;
 }
 
-if ($request.url.indexOf(adhf) != -1){
+if ($request.url.indexOf(adhf) != -1) {
     body.activities = [];
 }
 
 if ($request.url.indexOf('user') != -1) {
-    if(body.vip_info !== undefined){
+    if (body.vip_info !== undefined) {
         body.vip_info.vip.expires_time = 4092599349;
         body.vip_info.vip.is_auto_renewal = true;
         body.vip_info.svip.expires_time = 4092599349;
         body.vip_info.svip.is_auto_renewal = true;
         body.vip_info.show_upcoming_renewal = false;
-    }else{
+    } else {
         body.vip_info = {
             "vip": {
                 "expires_time": "4092599349",
@@ -50,13 +50,13 @@ if ($request.url.indexOf('user') != -1) {
         }
     }
 
-    if(body.user !== undefined){
+    if (body.user !== undefined) {
         body.user.name = "LINUX.DO";
-    }else{
+    } else {
         body.name = "LINUX.DO";
     }
 
-    if(body.user_info !== undefined){
+    if (body.user_info !== undefined) {
         body.user_info.name = "LINUX.DO";
         body.user_info.name_status = 1;
         body.user_info.avatar = "https://linux.do/user_avatar/linux.do/io.oi/96/138408_2.png";
@@ -66,10 +66,18 @@ if ($request.url.indexOf('user') != -1) {
         body.user_info.gender = 1;
         body.user_info.show_completed_award = true;
         body.user_info.is_under_maintenance = true;
-    }else{
+    } else {
         body.name = "LINUX.DO";
+        body.name_status = 1;
+        body.avatar = "https://linux.do/user_avatar/linux.do/io.oi/96/138408_2.png";
+        body.avatar_status = 1;
+        body.city = "🌍";
+        body.completed_percent = 100;
+        body.gender = 1;
+        body.show_completed_award = true;
+        body.is_under_maintenance = true;
     }
-  
+
 }
 
-$done({ body: JSON.stringify(body)});
+$done({ body: JSON.stringify(body) });
