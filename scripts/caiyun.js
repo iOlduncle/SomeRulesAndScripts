@@ -1,4 +1,4 @@
-console.log('caiyun');
+console.log($request.url);
 console.log($response.body);
 var body = JSON.parse($response.body);
 const vip = '/vip_info';
@@ -30,7 +30,9 @@ if ($request.url.indexOf('user') != -1){
     body.vip_info.vip.is_auto_renewal = false;
     body.vip_info.svip.expires_time = 4092599349;
     body.vip_info.svip.is_auto_renewal = false;
+    body.vip_info.show_upcoming_renewal = false;
     body.user.name = "LINUX.DO";
+    body.user_info.name = "LINUX.DO";
 }
 
 $done({ body: JSON.stringify(body)});
