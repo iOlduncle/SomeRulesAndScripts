@@ -13,6 +13,7 @@ DOMAIN-SUFFIX,adashbc.ut.taobao.com,REJECT
 
 [Script]
 http-response ^https?:\/\/(biz|wrapper)\.cyapi\.cn\/(.+\/(user.+|visitors|activity|card)|p\/v\d\/vip_info) requires-body=1,script-path=https://raw.githubusercontent.com/iOlduncle/SomeRulesAndScripts/main/scripts/caiyun.js
+http-response ^https?:\/\/(biz|wrapper)\.cyapi\.cn\/v2\/product$ requires-body=1,script-path=https://raw.githubusercontent.com/iOlduncle/SomeRulesAndScripts/main/scripts/caiyun-product.js
 
 [MITM]
 hostname = %APPEND% *.cyapi.cn

@@ -27,9 +27,9 @@ if ($request.url.indexOf(card) != -1){
 
 if ($request.url.indexOf('user') != -1){
     body.vip_info.vip.expires_time = 4092599349;
-    body.vip_info.vip.is_auto_renewal = false;
+    body.vip_info.vip.is_auto_renewal = true;
     body.vip_info.svip.expires_time = 4092599349;
-    body.vip_info.svip.is_auto_renewal = false;
+    body.vip_info.svip.is_auto_renewal = true;
     body.vip_info.show_upcoming_renewal = false;
     body.user.name = "LINUX.DO";
     body.user_info.name = "LINUX.DO";
