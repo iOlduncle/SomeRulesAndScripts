@@ -1,0 +1,3 @@
+payload:
+  - '+.teamcdn-a.akamaihd.net'
+  - '+.steamserver.net'
