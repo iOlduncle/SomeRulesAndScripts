@@ -1,0 +1,4 @@
+payload:
+  - '+.teamcdn-a.akamaihd.net'
+  - '+.steamserver.net'
+  - '+.itunes.apple.com'

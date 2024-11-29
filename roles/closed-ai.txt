@@ -18,6 +18,7 @@ payload:
   - '+.oaistatic.com'
   - '+.bing.com'
   - '+.bingapis.com'
+  - '+.login.microsoftonline.com'
   - '+.anthropic.com'
   - '+.claude.ai'
   - '+.bard.google.com'

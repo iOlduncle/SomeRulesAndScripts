@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain_suffix": [
+        "ciciai.com",
+        "bing.com",
+        "openai.com",
+        "vcs-sg.byteoversea.com",
+        "sf16-tcc-tos-sg.byteoversea.com",
+        "wss-normal-i18n.ciciai.com",
+        "ai.com",
+        "openai.com",
+        "chatgpt.com",
+        "chat.openai.com.cdn.cloudflare.net",
+        "openaiapi-site.azureedge.net",
+        "openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net",
+        "openaicomproductionae4b.blob.core.windows.net",
+        "production-openaicom-storage.azureedge.net",
+        "oaistatic.com",
+        "bingapis.com",
+        "anthropic.com",
+        "claude.ai",
+        "bard.google.com"
+      ],
+      "domain_keyword": "close.ai.linux.do"
+    }
+  ]
+}
