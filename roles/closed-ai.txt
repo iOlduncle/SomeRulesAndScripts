@@ -22,3 +22,5 @@ payload:
   - '+.anthropic.com'
   - '+.claude.ai'
   - '+.bard.google.com'
+  - '+.nsfwcharai.com'
+  - '+.nsfwcharacterai.com'
