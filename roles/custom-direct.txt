@@ -2,3 +2,5 @@ payload:
   - '+.teamcdn-a.akamaihd.net'
   - '+.steamserver.net'
   - '+.itunes.apple.com'
+  - '+.cq.e-hai.one'
+  - 'cq.e-hai.one'
