@@ -1,0 +1,26 @@
+{
+    "login": [
+        999,
+        997,
+        990
+    ],
+    "serverlist": [
+        {
+            "name": "登录测试",
+            "serverlist": [
+                {
+                    "originalSrvid": 1,
+                    "srvid": 1,
+                    "srvaddr": "121.37.155.68",
+                    "id": 1,
+                    "serverAlias": "s1",
+                    "serverName": "登录",
+                    "opentime": "2022-03-23 23:59:51",
+                    "srvport": 35317,
+                    "type": 2,
+                    "pf": "yfbx"
+                }
+            ]
+        }
+    ]
+}
