@@ -6,7 +6,7 @@
     ],
     "serverlist": [
         {
-            "name": "登录测试",
+            "name": "登录游戏",
             "serverlist": [
                 {
                     "originalSrvid": 1,
@@ -14,7 +14,7 @@
                     "srvaddr": "121.41.123.129",
                     "id": 1,
                     "serverAlias": "s1",
-                    "serverName": "登录",
+                    "serverName": "国内",
                     "opentime": "2022-03-23 23:59:51",
                     "srvport": 35317,
                     "type": 2,
