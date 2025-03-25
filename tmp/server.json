@@ -11,10 +11,10 @@
                 {
                     "originalSrvid": 1,
                     "srvid": 1,
-                    "srvaddr": "121.41.123.129",
+                    "srvaddr": "103.213.4.14",
                     "id": 1,
                     "serverAlias": "s1",
-                    "serverName": "国内",
+                    "serverName": "奶昔",
                     "opentime": "2022-03-23 23:59:51",
                     "srvport": 35317,
                     "type": 2,
