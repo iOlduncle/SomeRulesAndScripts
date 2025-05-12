@@ -24,3 +24,5 @@ payload:
   - '+.bard.google.com'
   - '+.nsfwcharai.com'
   - '+.nsfwcharacterai.com'
+  - '+.grazie.aws.intellij.net
+  - '+.grazie.ai
