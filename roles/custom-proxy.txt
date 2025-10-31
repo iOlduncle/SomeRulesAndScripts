@@ -2,3 +2,6 @@ payload:
   - '+.socloud.me'
   - '+.paopao.dog'
   - '+.acaisbest.com'
+  - '+.affinity.studio
+  - '+.affinity.serif.com
+  - '+.serif.com
