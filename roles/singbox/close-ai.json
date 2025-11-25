@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "rules": [
     {
       "domain_suffix": [
@@ -21,9 +21,18 @@
         "bingapis.com",
         "anthropic.com",
         "claude.ai",
-        "bard.google.com"
-      ],
-      "domain_keyword": "close.ai.linux.do"
+        "bard.google.com",
+        "gemini.google.com",
+        "grazie.ai",
+        "grazie.aws.intellij.net",
+        "nsfwcharacterai.com",
+        "nsfwcharai.com",
+        "nsfwcharacterai.com",
+        "nsfwcharai.com",
+        "antigravity.google",
+        "us-central1.run.app",
+        "run.app"
+      ]
     }
   ]
 }
