@@ -4,3 +4,4 @@ payload:
   - '+.itunes.apple.com'
   - '+.cq.e-hai.one'
   - 'cq.e-hai.one'
+  - '+.adobe.io'
