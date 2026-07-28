@@ -249,22 +249,21 @@ function overwriteProxyGroups(params) {
     autoProxyGroups.length &&
         groups[2].proxies.unshift(...autoProxyGroups.map((item) => item.name));
     autoProxyGroups.length &&
-        groups[3].proxies.unshift(...autoProxyGroups.filter(item=> item.name === "SG-自动选择")
-        .map(item=>item.name).concat(autoProxyGroups.filter(item=>item.name !== "SG-自动选择")
-        .map(item=>item.name)));
+        groups[3].proxies.unshift(...autoProxyGroups.filter(item => item.name === "SG-自动选择")
+            .map(item => item.name).concat(autoProxyGroups.filter(item => item.name !== "SG-自动选择")
+                .map(item => item.name)));
     groups.push(...autoProxyGroups);
     params["proxy-groups"] = groups;
 }
 //防止dns泄露
 function overwriteDns(params) {
     const cnDnsList = [
-        "https://223.5.5.5/dns-query",
-        "https://1.12.12.12/dns-query",
+        'https://223.5.5.5/dns-query',
+        'https://114.114.114.114/dns-query'
     ];
     const trustDnsList = [
-        'quic://dns.cooluc.com',
-        "https://1.0.0.1/dns-query",
-        "https://1.1.1.1/dns-query",
+        "https://cloudflare-dns.com/dns-query",
+        "https://dns.google/dns-query"
     ];
     // const notionDns = 'tls://dns.jerryw.cn'
     // const notionUrls = [
@@ -278,9 +277,10 @@ function overwriteDns(params) {
     // const combinedUrls = notionUrls.join(',');
     const dnsOptions = {
         enable: true,
+        "ipv6": false,
         "prefer-h3": true, // 如果DNS服务器支持DoH3会优先使用h3
         "default-nameserver": cnDnsList, // 用于解析其他DNS服务器、和节点的域名, 必须为IP, 可为加密DNS。注意这个只用来解析节点和其他的dns，其他网络请求不归他管
-        nameserver: trustDnsList, // 其他网络请求都归他管
+        nameserver: cnDnsList, // 其他网络请求都归他管
 
         // 这个用于覆盖上面的 nameserver
         "nameserver-policy": {
