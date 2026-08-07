@@ -41,7 +41,7 @@ function overwriteRules(params) {
         "closed-ai": {
             type: "http",
             behavior: "domain",
-            url: "https://raw.githubusercontent.com/iOlduncle/SomeRulesAndScripts/main/roles/closed-ai.txt",
+            url: "https://raw.githubusercontent.com/ilniuxio/SomeRulesAndScripts/main/roles/closed-ai.txt",
             path: "./ruleset/closed-ai.yaml",
             interval: 86400,
         },
@@ -62,7 +62,7 @@ function overwriteRules(params) {
         "custom-proxy": {
             type: "http",
             behavior: "domain",
-            url: "https://raw.githubusercontent.com/iOlduncle/SomeRulesAndScripts/main/roles/custom-proxy.txt",
+            url: "https://raw.githubusercontent.com/ilniuxio/SomeRulesAndScripts/main/roles/custom-proxy.txt",
             path: "./ruleset/custom-proxy.yaml",
             interval: 86400,
         },
